@@ -24,8 +24,6 @@ var isPhoneGapReady = false;
 
 function init() {
 	document.addEventListener("deviceready", onDeviceReady, false);
-	
-
 
 }
 

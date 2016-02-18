@@ -34,66 +34,13 @@ function onDeviceReady() {
    
     }
 
-function refreshPage() {
-  jQuery.mobile.pageContainer.pagecontainer('change', window.location.href, {
-    allowSamePageTransition: true,
-    transition: 'none',
-    reloadPage: true 
-  });
-}	
 
-// process the confirmation dialog result
-    function onConfirm(buttonIndex) {
-        //alert('You selected button ' + buttonIndex);
-		if (buttonIndex == "button 1"){
-			navigator.app.exitApp();
-		}
-    }
-
-    // Show a custom confirmation dialog
-    //
-    function showConfirm() {
-        navigator.notification.confirm(
-            'Souhaitez vous quitter l\'application ?', // message
-             onConfirm,            // callback to invoke with index of button pressed
-            'Quitter',           // title
-            ['Quitter','Annuler']         // buttonLabels
-			
-        );
-    }
-	
-	// alert dialog dismissed
-        function alertDismissed() {
-            // do something
-        }
-
-    // Show a custom alertDismissed
-    //
-    function showAlert() {
-        navigator.notification.alert(
-            'Le message est parti',  // message
-            alertDismissed,         // callback
-            'Message envoyé',            // title
-            'Fermer'                  // buttonName
-        );
-    }
-
-
-function onBackKeyDown() {
-	
-	//showConfirm();
-
-	
-    }
-
-
-window.onload = init;	
 
 
 
 $(document).ready(function (){
-  alert("page chargée");
-
+  //alert("page chargée");
+init();
 //creation de la bdd
 });
 
