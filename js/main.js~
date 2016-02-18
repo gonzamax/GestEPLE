@@ -27,7 +27,7 @@ function init() {
 
 function onDeviceReady() {
 	isPhoneGapReady = true;
-	//alert("The device is now ready to run Phonegap");
+	alert("The device is now ready to run Phonegap");
     
 }
 
