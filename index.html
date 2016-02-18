@@ -90,7 +90,27 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+        var db = window.sqlitePlugin.openDatabase({name: "gesteple.db", createFromLocation: 1});
+        db.transaction(function(tx) {
++              tx.executeSql("SELECT * from releve_logement;", [], function(tx, res) {
++                //alert("res.rows.length: " + res.rows.length);
++                alert("res.rows.item(0).data_num: " + res.rows.item(0).data_num);
++              });
++            });
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Now safe to use device APIs
+        alert("PhoneGap est fonctionnel");
+    }
+    </script>
     
     
   </body>
