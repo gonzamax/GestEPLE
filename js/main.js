@@ -20,27 +20,23 @@ This file is part of GestEPLE.
 var isPhoneGapReady = false;
 
 
-
-
 function init() {
-	document.addEventListener("deviceready", onDeviceReady, false);
-
+	document.addEventListener("deviceready", onDeviceReady, false); 
+	
 }
-
 
 function onDeviceReady() {
 	isPhoneGapReady = true;
 	alert("The device is now ready to run Phonegap");
-   
-    }
+    
+}
 
-
-
+window.onload = init;
 
 
 $(document).ready(function (){
   //alert("page chargée");
-init();
+
 //creation de la bdd
 });
 
