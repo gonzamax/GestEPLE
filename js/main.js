@@ -21,6 +21,13 @@ This file is part of GestEPLE.
     //
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
+        var db = window.sqlitePlugin.openDatabase({name: "gesteple.db", createFromLocation: 1});
+        db.transaction(function(tx) {
++              tx.executeSql("SELECT * from releve_logement;", [], function(tx, res) {
++                //alert("res.rows.length: " + res.rows.length);
++                alert("res.rows.item(0).data_num: " + res.rows.item(0).data_num);
++              });
++            });
     }
 
     // device APIs are available
