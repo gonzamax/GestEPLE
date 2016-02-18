@@ -12,11 +12,11 @@ This file is part of GestEPLE.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with LosGonza Domotique.  If not, see <http://www.gnu.org/licenses/>.
+    along with GestEPLE.  If not, see <http://www.gnu.org/licenses/>.
 
 
 */
-//Global variable that tel that Phonegap is ready
+//Global variable that tell that Phonegap is ready
 var isPhoneGapReady = false;
 
 
@@ -33,12 +33,6 @@ function onDeviceReady() {
 
 window.onload = init;
 
-
-$(document).ready(function (){
-  //alert("page chargée");
-
-//creation de la bdd
-});
 
 
 
