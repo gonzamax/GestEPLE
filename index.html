@@ -96,6 +96,11 @@
     //
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
+        var db = window.sqlitePlugin.openDatabase({name: "gesteple.db", createFromLocation: 1});
+        // demonstrate PRAGMA:
+    	db.executeSql("pragma releve_logement (releve_logement);", [], function(res) {
+      alert("PRAGMA res: " + JSON.stringify(res));
+    });
     }
 
     // device APIs are available
