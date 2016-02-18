@@ -17,12 +17,15 @@ This file is part of GestEPLE.
 
 */
 
-function init() {
-	document.addEventListener("deviceready", onDeviceReady, false); 
-	
-}
+// Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
-function onDeviceReady() {
-	alert("The device is now ready to run Phonegap");
-    
-}
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Now safe to use device APIs
+        alert("PhoneGap est fonctionnel");
+    }
