@@ -33,7 +33,7 @@ function init() {
 function onDeviceReady() {
 	isPhoneGapReady = true;
 	alert("The device is now ready to run Phonegap");
-   var db = window.sqlitePlugin.openDatabase({name: "gesteple.db", createFromLocation: 1});
+   
     }
 
 function refreshPage() {
@@ -94,7 +94,7 @@ window.onload = init;
 
 
 $(document).ready(function (){
-  console.log("page chargée");
+  alert("page chargée");
 
 //creation de la bdd
 });
